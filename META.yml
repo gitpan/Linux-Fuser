@@ -1,0 +1,10 @@
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         Linux-Fuser
+version:      1.3
+version_from: Fuser.pm
+installdirs:  site
+requires:
+    Test::More:                    
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.13
