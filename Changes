@@ -1,0 +1,6 @@
+Revision history for Perl extension Linux::Fuser.
+
+Mon Mar  5 06:54:55 2001
+	- original version; created by h2xs 1.21 with options
+		-AXn Linux::Fuser -b5.5.0
+
