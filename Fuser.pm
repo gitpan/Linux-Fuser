@@ -15,6 +15,10 @@
 #*****************************************************************************
 #*                                                                           *
 #*      $Log: Fuser.pm,v $
+#*      Revision 1.2  2001/11/07 07:09:52  gellyfish
+#*      * Fixed thinko reported by Shawn Ferris
+#*      * Added test
+#*
 #*      Revision 1.1  2001/03/05 08:13:19  gellyfish
 #*      Initial revision
 #*
@@ -66,7 +70,7 @@ use vars qw(
             @ISA 
            );
 
-($VERSION) = q$Revision: 1.1 $ =~ /([\d.]+)/;
+($VERSION) = q$Revision: 1.2 $ =~ /([\d.]+)/;
 
 
 =item new
@@ -103,8 +107,10 @@ sub fuser
 {
   my ($self,$file, @args)  = @_;
 
-  next unless -f $file;
+  return () unless -f $file;
+
   my @procinfo = ();
+
   my ( $dev,
        $ino,
        @ostuff ) = stat($file);
@@ -228,6 +234,10 @@ None.
 =head1 AUTHOR
 
 Jonathan Stowe, E<lt>jns@gellyfish.comE<gt>
+
+=head1 COPYRIGHT AND LICENSE
+
+Please see the README file in the source distribution.
 
 =head1 SEE ALSO
 
